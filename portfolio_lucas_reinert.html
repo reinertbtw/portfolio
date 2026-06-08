@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lucas Reinert | Dev</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="portfolio.css" />
+    <script defer src="portfolio.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a href="#hero" class="nav-logo">lr.dev</a>
+      <ul class="nav-links">
+        <li><a href="#sobre">sobre</a></li>
+        <li><a href="#stack">stack</a></li>
+        <li><a href="#projetos">projetos</a></li>
+        <li><a href="#contato">contato</a></li>
+      </ul>
+      <button id="theme-toggle" class="btn btn-ghost" type="button" aria-label="Alternar tema">
+        Light
+      </button>
+    </nav>
+
+    <section class="hero" id="hero">
+      <div class="status-badge fade-in">
+        <span class="dot"></span>
+        Disponível para oportunidades
+      </div>
+
+      <div class="hero-eyebrow fade-in">desenvolvedor em formação</div>
+
+      <h1 class="fade-in">
+        Lucas<br />
+        <span>Reinert da Silva</span><span class="cursor"></span>
+      </h1>
+
+      <p class="hero-desc fade-in">
+        Estudante de <strong>Desenvolvimento de Sistemas</strong> no SENAI
+        Blumenau/SC, Participante do programa <strong>Entra21</strong>.
+      </p>
+
+      <div class="hero-cta fade-in">
+        <a href="https://github.com/reinertbtw" class="btn btn-primary"
+          >↗ github</a
+        >
+        <a href="curriculo.pdf" download class="btn btn-secondary"
+          >↗ currículo</a
+        >
+        <a
+          href="https://www.linkedin.com/in/lucas-reinertk/"
+          class="btn btn-ghost"
+          >linkedin</a
+        >
+        <a href="#projetos" class="btn btn-ghost">ver projetos</a>
+      </div>
+    </section>
+
+    <hr />
+
+    <section id="sobre">
+      <div class="section-label fade-in">01 — sobre</div>
+      <h2 class="fade-in">Quem é o Lucas</h2>
+
+      <div class="about-content fade-in">
+        <p>
+          Sou estudante de Desenvolvimento de Sistemas no <strong>SENAI
+          Blumenau</strong> e participante do <strong>Entra21</strong>, com foco
+          em <strong>Java</strong>, front-end e lógica de software. Gosto de
+          construir interfaces limpas com código organizado e resultados reais.
+        </p>
+        <p>
+          Hoje, estou desenvolvendo projetos próprios em HTML, CSS e JavaScript
+          enquanto expando minhas habilidades em back-end, Git e boas práticas
+          de engenharia de software.
+        </p>
+
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-year">2026 →</div>
+            <div class="tl-text">
+              <strong>Entra21</strong> — Programa de capacitação com foco em
+              Java
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2026 →</div>
+            <div class="tl-text">
+              <strong>SENAI Blumenau</strong> — Técnico em Desenvolvimento de
+              Sistemas
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2025 →</div>
+            <div class="tl-text">
+              Primeiro projeto com
+              <strong>HTML, CSS e JavaScript e IA</strong> — ProLife
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <section id="stack">
+      <div class="section-label fade-in">02 — stack</div>
+      <h2 class="fade-in">Tecnologias</h2>
+
+      <div class="stack-grid fade-in">
+        <span class="tag">HTML</span>
+        <span class="tag">GitHub</span>
+        <span class="tag learning">CSS ↑</span>
+        <span class="tag learning">JavaScript ↑</span>
+        <span class="tag learning">Java ↑</span>
+        <span class="tag learning">Git ↑</span>
+        <span class="tag learning">SQL ↑</span>
+      </div>
+
+      <p class="study-note">
+        <span style="color: var(--accent3)">↑</span> Atualmente estudando
+      </p>
+    </section>
+
+
+    <section id="projetos">
+      <div class="section-label fade-in">03 — Projetos</div>
+      <h2 class="fade-in">O que eu construí</h2>
+
+      <div class="projects-grid">
+        <a
+          href="https://reinertbtw.github.io/ProLife/"
+          class="project-card fade-in"
+        >
+          <div class="project-header">
+            <span class="project-name">ProLife</span>
+            <span class="project-link">↗ landing page</span>
+          </div>
+          <p class="project-desc">
+            Jogo de escolhas e ações — o jogador toma decisões que impactam o
+            desenvolvimento da narrativa. Foco em lógica de estados e
+            interatividade com JavaScript puro.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">HTML</span>
+            <span class="project-tag">CSS</span>
+            <span class="project-tag">JavaScript</span>
+            <span class="project-tag">game logic</span>
+            <span class="project-tag highlight">em andamento</span>
+          </div>
+        </a>
+
+        <a
+          href="https://reinertbtw.github.io/Organiza/"
+          class="project-card fade-in"
+        >
+          <div class="project-header">
+            <span class="project-name">Organiza+</span>
+            <span class="project-link">↗ landing page</span>
+          </div>
+          <p class="project-desc">
+            Plataforma de organização pessoal. Interface limpa para gerenciar
+            tarefas e manter a produtividade.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">HTML</span>
+            <span class="project-tag">CSS</span>
+            <span class="project-tag">JavaScript</span>
+            <span class="project-tag">produtividade</span>
+          </div>
+        </a>
+
+        <a
+          href="https://github.com/reinertbtw/entra21-2026"
+          class="project-card fade-in"
+        >
+          <div class="project-header">
+            <span class="project-name">Entra21 — Java</span>
+            <span class="project-link">↗ repo</span>
+          </div>
+          <p class="project-desc">
+            Repositório com exercícios e projetos do programa Entra21. Estudos
+            de Java, OOP e Spring.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Java</span>
+            <span class="project-tag">OOP</span>
+            <span class="project-tag highlight">em andamento</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <hr />
+
+    <section id="contato">
+      <div class="section-label fade-in">04 — contato</div>
+      <h2 class="fade-in">Vamos conversar</h2>
+
+      <p class="contact-note fade-in">
+        Aberto a estágios, freelas e projetos colaborativos. Me encontre por
+        aqui:
+      </p>
+
+      <div class="contact-links fade-in">
+        <a href="https://github.com/reinertbtw" class="btn btn-primary"
+          >↗ github</a
+        >
+        <a href="curriculo.pdf" download class="btn btn-secondary"
+          >↗ currículo</a
+        >
+        <a
+          href="https://www.linkedin.com/in/lucas-reinertk/"
+          class="btn btn-ghost"
+          >linkedin</a
+        >
+        <a href="https://www.instagram.com/reinertk_/" class="btn btn-ghost"
+          >instagram</a
+        >
+      </div>
+    </section>
+
+    <footer>built by lucas reinert · blumenau/sc · 2026</footer>
+  </body>
+</html>
