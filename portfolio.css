@@ -459,6 +459,12 @@ h2 {
   border-color: rgba(250, 204, 21, 0.3);
 }
 
+.project-tag.freela {
+  color: rgb(34, 197, 94);
+  background: rgba(34, 197, 94, 0.12);
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
 /* ABOUT */
 .about-content {
   color: var(--muted);
