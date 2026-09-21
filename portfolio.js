@@ -1,54 +1,42 @@
 const themeToggle = document.getElementById("theme-toggle");
+const themeLabel = themeToggle?.querySelector(".theme-label");
 
-const getPreferredTheme = () => {
-  const storedTheme = localStorage.getItem("theme");
-  if (storedTheme) return storedTheme;
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
-};
+function preferredTheme() {
+  const saved = localStorage.getItem("portfolio-theme");
+  if (saved) return saved;
+  return window.matchMedia("(prefers-color-scheme: light)").matches
+    ? "light"
+    : "dark";
+}
 
-const applyTheme = (theme) => {
+function setTheme(theme) {
   document.body.classList.toggle("light", theme === "light");
-  const label = theme === "light" ? "Dark" : "Light";
-  themeToggle.textContent = label;
-  themeToggle.setAttribute(
+  if (themeLabel) themeLabel.textContent = theme === "light" ? "dark" : "light";
+  themeToggle?.setAttribute(
     "aria-label",
-    theme === "light"
-      ? "Alternar para tema escuro"
-      : "Alternar para tema claro",
+    theme === "light" ? "Alternar para tema escuro" : "Alternar para tema claro"
   );
-  localStorage.setItem("theme", theme);
-};
+  localStorage.setItem("portfolio-theme", theme);
+}
 
-const toggleTheme = () => {
-  const newTheme = document.body.classList.contains("light") ? "dark" : "light";
-  applyTheme(newTheme);
-};
+setTheme(preferredTheme());
 
-const initFadeIn = () => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    },
-    { threshold: 0.1 },
-  );
+themeToggle?.addEventListener("click", () => {
+  setTheme(document.body.classList.contains("light") ? "dark" : "light");
+});
 
-  document.querySelectorAll(".fade-in").forEach((el) => {
-    observer.observe(el);
-    setTimeout(() => el.classList.add("visible"), 100);
-  });
-};
+const observer = new IntersectionObserver(
+  (entries, obs) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("visible");
+      obs.unobserve(entry.target);
+    });
+  },
+  { threshold: 0.12 }
+);
 
-document.addEventListener("DOMContentLoaded", () => {
-  if (themeToggle) {
-    applyTheme(getPreferredTheme());
-    themeToggle.addEventListener("click", toggleTheme);
-  }
-
-  initFadeIn();
+document.querySelectorAll(".reveal").forEach((element, index) => {
+  element.style.transitionDelay = `${Math.min(index * 25, 160)}ms`;
+  observer.observe(element);
 });
