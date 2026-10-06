@@ -1,347 +1,415 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Portfólio de Lucas Reinert — desenvolvedor em formação, estudante de Desenvolvimento de Sistemas no SENAI Blumenau."
+      content="Lucas Reinert — desenvolvimento web e mobile em Blumenau. Conheça meus projetos, minha trajetória e as ideias que estou colocando no mundo."
     />
-    <title>Lucas Reinert — Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="portfolio.css" />
-    <script defer src="portfolio.js"></script>
+    <meta name="theme-color" content="#f1f2ef" />
+    <title>Lucas Reinert — Código com intenção.</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="portfolio.css?v=ajustes-3-v2" />
+    <script defer src="portfolio.js?v=ajustes-3-v2"></script>
   </head>
   <body>
-    <div class="noise" aria-hidden="true"></div>
-
+    <a class="skip-link" href="#projetos">Pular para os projetos</a>
     <header class="site-header">
-      <a class="brand" href="#hero" aria-label="Voltar ao início">
-        <span>LR</span><b>.</b>
-      </a>
-
-      <nav class="nav-links" aria-label="Navegação principal">
-        <a href="#projetos">trabalhos</a>
-        <a href="#sobre">sobre</a>
-        <a href="#stack">stack</a>
-        <a href="#contato">contato</a>
+      <a class="brand" href="#inicio" aria-label="Lucas Reinert, início"
+        >lr<span>.</span></a
+      >
+      <span class="header-note">DESENVOLVIMENTO<br />COM INTENÇÃO.</span>
+      <nav id="navigation" aria-label="Navegação principal">
+        <a href="#projetos">Projetos <sup>01</sup></a
+        ><a href="#sobre">Sobre <sup>02</sup></a
+        ><a href="#stack">Stack <sup>03</sup></a
+        ><a href="#contato">Contato <span>↗</span></a>
       </nav>
-
       <button
         class="theme-toggle"
-        id="theme-toggle"
         type="button"
-        aria-label="Alternar tema"
+        aria-label="Ativar tema escuro"
+        title="Alternar tema"
       >
-        <span class="theme-icon">◐</span>
-        <span class="theme-label">light</span>
+        ◐
+      </button>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-controls="navigation"
+        aria-expanded="false"
+      >
+        Menu <span>+</span>
       </button>
     </header>
-
     <main>
-      <section class="hero" id="hero">
-        <div class="hero-meta reveal">
-          <span>portfolio / 2026</span>
-          <span>blumenau — sc</span>
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="eyebrow hero-meta">
+          <span>PORTFÓLIO INDEPENDENTE / 2026</span
+          ><span>BLUMENAU, BRASIL </span>
         </div>
-
-        <div class="hero-title-wrap">
-          <h1 class="hero-title reveal">
-            <span class="line line-one">LUCAS</span>
-            <span class="line line-two"
-              >REINERT<span class="accent-dot">.</span></span
-            >
-          </h1>
-
-          <div class="hero-side reveal">
-            <p class="kicker">desenvolvedor em formação</p>
+        <h1 id="hero-title">
+          <span class="first-name">LUCAS</span
+          ><span class="surname">REINERT<span class="title-dot">.</span></span>
+        </h1>
+        <div class="hero-bottom">
+          <div class="hero-intro">
+            <span class="eyebrow">DESENVOLVIMENTO WEB &amp; MOBILE</span>
+            <h2>Dev em construção.</h2>
+            <div class="hero-art" aria-hidden="true">
+              <div class="code-mark">
+                <svg viewBox="0 0 300 180" fill="none">
+                  <path
+                    d="M88 48 42 90 88 132M212 48 258 90 212 132M173 28 127 152"
+                    stroke="currentColor"
+                    stroke-width="13"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span class="code-caption"
+                  >LÓGICA. INTERFACE. EXPERIÊNCIA.
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-details">
             <p>
-              Construo interfaces, aplicações e experiências digitais enquanto
-              estudo Desenvolvimento de Sistemas no SENAI Blumenau e participo
-              do Entra21.
+              Sou estudante do 2 ano do E.M com técnico integrado em Análise e
+              Desenvolvimento de Sistemas no SENAI Blumenau e formado em Java
+              pelo Entra21. Transformo ideias em aplicações para web e mobile,
+              conectando lógica, dados e interface.
             </p>
-
             <div class="hero-actions">
-              <a href="#projetos" class="text-link"
-                >explorar trabalhos <span>↓</span></a
+              <a class="button primary" href="#projetos"
+                >Ver meus projetos <span>↘</span></a
               >
-              <a
-                href="https://github.com/reinertbtw"
-                target="_blank"
-                rel="noreferrer"
-                class="text-link"
-                >github <span>↗</span></a
+              <a class="button" href="curriculo.pdf" download
+                >Baixar currículo <span>↘</span></a
               >
+            </div>
+            <div class="hero-connections">
+              <span class="status"
+                ><i></i> Buscando estágio ou jovem aprendiz</span
+              >
+              <div class="hero-social">
+                <a
+                  href="https://github.com/reinertbtw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub ↗</a
+                ><a
+                  href="https://www.linkedin.com/in/lucas-reinertk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LinkedIn ↗</a
+                >
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="hero-footer reveal">
-          <div class="availability">
-            <span class="status-dot"></span> disponível para oportunidades
-          </div>
-          <div class="scroll-note">scroll to explore</div>
+        <div class="hero-baseline eyebrow">
+          <span>JAVA / WEB / MOBILE</span><span>ROLE PARA DESCOBRIR ↓</span>
         </div>
       </section>
-
-      <section class="projects section" id="projetos">
-        <div class="section-top reveal">
-          <span class="section-index">01</span>
-          <h2>Selected work</h2>
-          <span class="section-count">04 projetos</span>
+      <section
+        class="projects section"
+        id="projetos"
+        aria-labelledby="projects-title"
+      >
+        <div class="section-heading reveal">
+          <span class="eyebrow">01 / PROJETOS SELECIONADOS</span>
+          <h2 id="projects-title">Do papel para a <em>tela.</em></h2>
+          <p>
+            Problemas reais, novas ferramentas<br />e muita vontade de
+            construir.
+          </p>
         </div>
-
-        <article class="project project-featured reveal">
-          <div class="project-copy">
-            <div class="project-heading">
-              <span class="project-number">01 /</span>
+        <article class="project prolife reveal">
+          <a
+            class="project-stage prolife-stage"
+            href="https://prolife.onrender.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Abrir ProLife em nova aba"
+          >
+            <div class="prolife-stage-heading">
               <div>
-                <p class="project-type">freela · web app · 2026</p>
+                <span class="eyebrow">SIMULADOR DE CARREIRA / 01</span
+                ><span class="prolife-logotype">ProLife<span>.</span></span>
+              </div>
+              <p>Suas escolhas<br />falam por você.</p>
+            </div>
+            <div class="browser-frame">
+              <div class="browser-bar">
+                <span>● ● ●</span><span>prolife.onrender.com</span
+                ><span>↗</span>
+              </div>
+              <img
+                src="assets/prolife.png"
+                alt="Interface do ProLife: apresentação do simulador e formulário de login"
+                width="1905"
+                height="912"
+                loading="lazy"
+              />
+            </div>
+            <div class="prolife-stage-footer">
+              <span class="eyebrow">CARREIRA · ESCOLHAS · AUTOCONHECIMENTO</span
+              ><span>Explorar projeto ↗</span>
+            </div>
+          </a>
+          <div class="project-info">
+            <div>
+              <span class="eyebrow">FULL STACK / ENTRA21 / CONCLUÍDO</span>
+              <h3>ProLife</h3>
+            </div>
+            <div>
+              <p>
+                Um <strong>simulador de carreira</strong> em que cada decisão
+                importa. Uma jornada gamificada que transforma escolhas em um
+                <strong>relatório de análise comportamental.</strong>
+              </p>
+              <ul class="tags" aria-label="Tecnologias">
+                <li>JavaScript</li>
+                <li>Java / Spring</li>
+                <li>PostgreSQL</li>
+                <li>Firebase</li>
+              </ul>
+              <a
+                class="project-link"
+                href="https://prolife.onrender.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Acessar ProLife <span>↗</span></a
+              >
+            </div>
+          </div>
+        </article>
+        <div class="project-pair">
+          <article class="project japa reveal">
+            <div class="project-stage japa-stage">
+              <div class="stage-top eyebrow">
+                <span>FEITO PARA O PRÓXIMO ROUND.</span><span>02 / 03</span>
+              </div>
+              <div class="japa-type" aria-hidden="true">
+                NEXT<br /><span>ROUND.</span>
+              </div>
+              <div class="browser-frame">
+                <div class="browser-bar">
+                  <span>● ● ●</span><span>ct team japa</span><span>↗</span>
+                </div>
+                <img
+                  src="assets/ct-japa.png"
+                  alt="Tela de acesso do sistema de agendamento do CT Team Japa"
+                  width="1903"
+                  height="909"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="project-info">
+              <div>
+                <span class="eyebrow">FREELANCE / WEB APP</span>
                 <h3>CT Team Japa</h3>
               </div>
-            </div>
-            <p class="project-description">
-              Sistema web para gestão de treinos de boxe. Alunos marcam horários
-              semanais em tempo real, enquanto o professor gerencia aprovações,
-              grade e alunos.
-            </p>
-            <div class="project-bottom">
-              <div class="tags">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span
-                ><span>Firebase</span>
-              </div>
-              <a
-                href="https://github.com/reinertbtw/ct-japa-cavalheiro"
-                target="_blank"
-                rel="noreferrer"
-                >ver projeto ↗</a
-              >
-            </div>
-          </div>
-          <div class="project-visual visual-one">
-            <img
-              src="./assets/ct-japa.png"
-              alt="Tela de login do CT Team Japa"
-              class="project-image"
-            />
-          </div>
-        </article>
-
-        <article class="project project-reverse reveal">
-          <div class="project-copy">
-            <div class="project-heading">
-              <span class="project-number">02 /</span>
               <div>
-                <p class="project-type">mobile · maps · em andamento</p>
+                <p>
+                  Menos burocracia, mais treino. Agendamento de aulas de boxe e
+                  gestão de alunos em um sistema web com atualizações em tempo
+                  real.
+                </p>
+                <ul class="tags" aria-label="Tecnologias">
+                  <li>HTML / CSS</li>
+                  <li>JavaScript</li>
+                  <li>Firebase</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="project cyclo reveal">
+            <div class="project-stage cyclo-stage">
+              <div class="stage-top eyebrow">
+                <span>UM NOVO CAMINHO.</span><span>03 / 03</span>
+              </div>
+              <svg
+                class="route-art"
+                viewBox="0 0 600 560"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M-20 440C150 440 40 130 240 130S380 460 620 270"
+                  stroke="currentColor"
+                  stroke-width="55"
+                />
+                <path
+                  d="M-20 440C150 440 40 130 240 130S380 460 620 270"
+                  stroke="#d8e8ac"
+                  stroke-width="2"
+                  stroke-dasharray="10 12"
+                />
+              </svg>
+              <span class="cyclo-label">VÁ DE<br />BIKE.</span>
+              <img
+                class="phone"
+                src="assets/cycloroute.png"
+                alt="Mapa e navegação do aplicativo CycloRoute"
+                width="444"
+                height="914"
+                loading="lazy"
+              />
+              <span class="wip eyebrow">↗ EM DESENVOLVIMENTO</span>
+            </div>
+            <div class="project-info">
+              <div>
+                <span class="eyebrow">MOBILE / EM DESENVOLVIMENTO</span>
                 <h3>CycloRoute</h3>
               </div>
-            </div>
-            <p class="project-description">
-              Aplicativo mobile para ciclistas, desenvolvido com Flutter e Dart,
-              com foco em localização, GPS, mapas e gerenciamento de trajetos.
-            </p>
-            <div class="project-bottom">
-              <div class="tags">
-                <span>Flutter</span><span>Dart</span><span>GPS</span
-                ><span>Maps</span>
-              </div>
-            </div>
-          </div>
-          <div class="project-visual visual-two">
-            <img
-              src="./assets/cycloroute.png"
-              alt="Tela principal do CycloRoute"
-              class="project-image phone"
-            />
-          </div>
-        </article>
-
-        <article class="project reveal">
-          <div class="project-copy">
-            <div class="project-heading">
-              <span class="project-number">03 /</span>
               <div>
-                <p class="project-type">game · full stack · em andamento</p>
-                <h3>ProLife</h3>
+                <p>
+                  A cidade vista sobre duas rodas. Aplicativo para ciclistas com
+                  foco em mapas, localização e organização de trajetos.
+                </p>
+                <ul class="tags" aria-label="Tecnologias">
+                  <li>Flutter</li>
+                  <li>Dart</li>
+                  <li>GPS / Maps</li>
+                </ul>
               </div>
             </div>
-            <p class="project-description">
-              Simulador de carreira gamificado. O jogador escolhe uma área
-              profissional, toma decisões e acompanha como suas escolhas afetam
-              evolução, status e conquistas.
-            </p>
-            <div class="project-bottom">
-              <div class="tags">
-                <span>JavaScript</span><span>Java</span><span>Spring Boot</span
-                ><span>MySQL</span>
-              </div>
-              <a
-                href="https://reinertbtw.github.io/ProLife/"
-                target="_blank"
-                rel="noreferrer"
-                >abrir projeto ↗</a
-              >
-            </div>
-          </div>
-          <div class="project-visual visual-three">
-            <img
-              src="./assets/prolife.png"
-              alt="Tela de login do ProLife"
-              class="project-image"
-            />
-          </div>
-        </article>
-      </section>
-
-      <section class="about section" id="sobre">
-        <div class="section-top reveal">
-          <span class="section-index">02</span>
-          <h2>About</h2>
-          <span class="section-count">quem sou</span>
+          </article>
         </div>
-
-        <div class="about-grid">
-          <div class="about-statement reveal">
-            <p>
-              Eu gosto de pegar uma ideia que ainda está meio bagunçada e
-              transformar em algo que <span>funciona de verdade.</span>
-            </p>
-          </div>
-
+        <a
+          class="text-link github-link"
+          href="https://github.com/reinertbtw"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Mais código, testes e ideias no GitHub <span>↗</span></a
+        >
+      </section>
+      <section class="about section" id="sobre" aria-labelledby="about-title">
+        <div class="about-top reveal">
+          <span class="eyebrow">02 / POR TRÁS DO CÓDIGO</span>
+          <h2 id="about-title">
+            Gosto de entender.<br />E de <em>fazer acontecer.</em>
+          </h2>
+        </div>
+        <div class="about-bottom">
           <div class="about-copy reveal">
             <p>
               Sou estudante de Desenvolvimento de Sistemas no
-              <strong>SENAI Blumenau</strong> e participante do
-              <strong>Entra21</strong>. Tenho interesse em desenvolvimento de software 
-              e gosto principalmente de projetos em que 
-              consigo acompanhar o produto tomando forma, 
-              desde a lógica e os dados até a experiência final do usuário.
+              <strong>SENAI Blumenau</strong> e concluí a formação em Java pelo
+              <strong>Entra21</strong>.
             </p>
             <p>
-              Hoje estudo Java, TypeScript, desenvolvimento web, banco de dados
-              e ferramentas que me permitam criar produtos cada vez mais
-              completos.
+              Gosto de acompanhar um produto tomando forma: da lógica e dos
+              dados à experiência de quem está do outro lado da tela. É isso que
+              me move a experimentar, aprender e construir.
             </p>
-            <a class="text-link" href="curriculo.pdf" download
-              >baixar currículo <span>↘</span></a
+            <a class="button" href="curriculo.pdf" download
+              >Baixar currículo <span>↘</span></a
             >
           </div>
         </div>
-
-        <div class="timeline reveal">
-          <div class="timeline-row">
-            <span>2025</span>
-            <p>
-              Primeiro projeto web com HTML, CSS, JavaScript e IA —
-              <b>ProLife</b>
-            </p>
+        <div class="education reveal">
+          <div>
+            <span class="eyebrow">EM FORMAÇÃO</span>
+            <h3>Desenvolvimento de Sistemas</h3>
+            <p>SENAI Blumenau / conclusão prevista em 2027</p>
           </div>
-          <div class="timeline-row">
-            <span>2026</span>
-            <p>
-              <b>SENAI Blumenau</b> — Técnico em Desenvolvimento de Sistemas
-            </p>
-          </div>
-          <div class="timeline-row">
-            <span>2026</span>
-            <p><b>Entra21</b> — capacitação com foco em Java</p>
-          </div>
-          <div class="timeline-row current">
-            <span>agora</span>
-            <p>
-              Construindo projetos, estudando e refinando meu foco dentro de
-              tecnologia.
-            </p>
+          <div>
+            <span class="eyebrow">CONCLUÍDO / 2026</span>
+            <h3>Entra21 — Java</h3>
+            <p>Da programação orientada a objetos ao projeto em equipe.</p>
           </div>
         </div>
       </section>
-
-      <section class="stack section" id="stack">
-        <div class="section-top reveal">
-          <span class="section-index">03</span>
-          <h2>Stack / tools</h2>
-          <span class="section-count">o que uso</span>
+      <section class="stack section" id="stack" aria-labelledby="stack-title">
+        <div class="section-heading reveal">
+          <span class="eyebrow">03 / CAIXA DE FERRAMENTAS</span>
+          <h2 id="stack-title">Cada ideia, uma <em>possibilidade.</em></h2>
+          <p>O que uso para conectar lógica, interface e experiência.</p>
         </div>
-
         <div class="stack-list reveal">
           <div class="stack-row">
-            <span class="stack-index">01</span><strong>JavaScript</strong>
-            <p>interfaces · lógica · aplicações web</p>
-            <span>JS</span>
+            <span class="eyebrow">01 / INTERFACE</span>
+            <h3>HTML, CSS & JavaScript</h3>
+            <p>Da estrutura à interação.</p>
+            <span aria-hidden="true">↗</span>
           </div>
           <div class="stack-row">
-            <span class="stack-index">02</span><strong>HTML / CSS</strong>
-            <p>estrutura · responsividade · UI</p>
-            <span>WEB</span>
+            <span class="eyebrow">02 / BACKEND</span>
+            <h3>Java & Spring Boot</h3>
+            <p>Lógica que sustenta a experiência.</p>
+            <span aria-hidden="true">↗</span>
           </div>
           <div class="stack-row">
-            <span class="stack-index">03</span><strong>TypeScript</strong>
-            <p>estudando agora</p>
-            <span>TS</span>
+            <span class="eyebrow">03 / MOBILE</span>
+            <h3>Flutter & Dart</h3>
+            <p>Ideias que vão com você.</p>
+            <span aria-hidden="true">↗</span>
           </div>
           <div class="stack-row">
-            <span class="stack-index">04</span><strong>Java</strong>
-            <p>OOP · Entra21 · backend</p>
-            <span>JAVA</span>
+            <span class="eyebrow">04 / DADOS</span>
+            <h3>SQL & Firebase</h3>
+            <p>MySQL, PostgreSQL e autenticação.</p>
+            <span aria-hidden="true">↗</span>
           </div>
           <div class="stack-row">
-            <span class="stack-index">05</span><strong>Flutter / Dart</strong>
-            <p>mobile · CycloRoute</p>
-            <span>APP</span>
-          </div>
-          <div class="stack-row">
-            <span class="stack-index">06</span><strong>Firebase / MySQL</strong>
-            <p>dados · autenticação · persistência</p>
-            <span>DB</span>
+            <span class="eyebrow">05 / EXPLORANDO</span>
+            <h3>TypeScript</h3>
+            <p>O próximo capítulo do aprendizado.</p>
+            <span aria-hidden="true">↗</span>
           </div>
         </div>
-
-        <div class="tools-line reveal">
-          <span>TOOLS</span>
-          <p>
-            Git / GitHub / Linux / VS Code / IntelliJ / Firestore / Terminal
-          </p>
+        <div class="tools-line eyebrow">
+          <span>NO DIA A DIA</span>
+          <p>GIT / GITHUB / LINUX / VS CODE / INTELLIJ / TERMINAL</p>
         </div>
       </section>
-
-      <section class="contact section" id="contato">
-        <div class="contact-kicker reveal">04 / contact</div>
-        <div class="contact-title reveal">VAMOS<br /><span>CONVERSAR?</span></div>
-        <div class="contact-bottom reveal">
+      <section
+        class="contact section"
+        id="contato"
+        aria-labelledby="contact-title"
+      >
+        <div class="contact-top eyebrow">
+          <span>04 / CONTATO</span>
+        </div>
+        <h2 id="contact-title">
+          Vamos
+          <a href="mailto:reinertwrk@gmail.com"
+            ><em>conversar?</em><span>↗</span></a
+          >
+        </h2>
+        <div class="contact-bottom">
           <p>
-            Estou em busca de uma oportunidade de estágio ou Jovem Aprendiz na área de Tecnologia da Informação.
+            Busco uma oportunidade de estágio ou jovem aprendiz em tecnologia.
+            Vamos conversar sobre o que podemos construir juntos?
           </p>
           <div class="contact-links">
-            <a
-              href="mailto:reinertwrk@gmail.com"
-              >email ↗</a>
-            <a
-              href="https://github.com/reinertbtw"
-              target="_blank"
-              rel="noreferrer"
-              >github ↗</a
-            >
-            <a
+            <a href="mailto:reinertwrk@gmail.com"
+              ><span class="email-address">reinertwrk@gmail.com</span
+              ><span class="email-label">E-mail</span> <span>↗</span></a
+            ><a
               href="https://www.linkedin.com/in/lucas-reinertk/"
               target="_blank"
-              rel="noreferrer"
-              >linkedin ↗</a
-            >
-            <a href="curriculo.pdf" download>currículo ↘</a>
+              rel="noopener noreferrer"
+              >LinkedIn <span>↗</span></a
+            ><a
+              href="https://github.com/reinertbtw"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub <span>↗</span></a
+            ><a href="curriculo.pdf" download>Currículo <span>↘</span></a>
           </div>
         </div>
       </section>
     </main>
-
-    <footer>
-      <span>PORTFOLIO</span>
-      <span>Lucas Reinert © 2026</span>
-      <a href="#hero">voltar ao topo ↑</a>
+    <footer class="eyebrow">
+      <a href="#inicio" class="footer-brand">LR.</a
+      ><span>LUCAS REINERT © 2026</span
+      ><a href="#inicio">DE VOLTA AO COMEÇO ↑</a>
     </footer>
   </body>
 </html>
